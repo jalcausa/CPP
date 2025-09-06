@@ -5,30 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/06 13:05:49 by jalcausa          #+#    #+#             */
-/*   Updated: 2025/09/06 13:24:05 by jalcausa         ###   ########.fr       */
+/*   Created: 2025/09/06 13:26:39 by jalcausa          #+#    #+#             */
+/*   Updated: 2025/09/06 13:31:23 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-void	leak_check(void)
+int main(void)
 {
-	std::system("leaks -q zombie_horde"); // macOS
-	//std::system("valgrind ./programa"); //Linux
-}
+	std::string		brain = "HI THIS IS BRAIN";
+	std::string		*stringPTR = &brain;
+	std::string		&stringREF = brain;
 
-int	main()
-{
-	std::atexit(leak_check);
-	std::cout << "Creating a horde of zombies ... " << std::endl;
-	Zombie *horde = zombieHorde(10, "zombie");
-	for (int i = 0; i < 10; ++i)
-	{
-		std::cout << "The zombie number " << i << " is going to announce itself ... " << std::endl;
-		horde[i].announce();
-	}
-	delete [] horde;
+	std::cout << "Memory address of brain: " << &brain << std::endl;
+	std::cout << "Memory address held by stringPTR: " << stringPTR << std::endl;
+	std::cout << "Memory address held by stringREF: " << &stringREF << std::endl;
+	std::cout << "Value of brain: " << brain << std::endl;
+	std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
+	std::cout << "Value pointed to by stringREF: " << stringREF << std::endl;
+	
 	return (0);
-
 }
