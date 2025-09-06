@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 19:38:19 by jalcausa          #+#    #+#             */
-/*   Updated: 2025/09/01 19:57:11 by jalcausa         ###   ########.fr       */
+/*   Updated: 2025/09/06 12:15:58 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ class Zombie
 		~Zombie(void);
 		void announce(void) const;
 };
+
+Zombie* newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
