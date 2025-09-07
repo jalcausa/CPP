@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 20:17:46 by jalcausa          #+#    #+#             */
-/*   Updated: 2025/09/06 20:34:04 by jalcausa         ###   ########.fr       */
+/*   Updated: 2025/09/07 12:33:20 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define HUMANB_HPP
 
 #include <iostream>
+#include <string>
 #include "Weapon.hpp"
 
 class HumanB

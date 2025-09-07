@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 19:43:03 by jalcausa          #+#    #+#             */
-/*   Updated: 2025/09/06 20:14:39 by jalcausa         ###   ########.fr       */
+/*   Updated: 2025/09/07 12:32:38 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WEAPON_HPP
 
 #include <iostream>
+#include <string>
 
 class Weapon
 {

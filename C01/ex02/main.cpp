@@ -6,11 +6,12 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 13:26:39 by jalcausa          #+#    #+#             */
-/*   Updated: 2025/09/06 13:31:23 by jalcausa         ###   ########.fr       */
+/*   Updated: 2025/09/07 12:33:29 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 
 int main(void)
 {
