@@ -1,3 +1,9 @@
+/*
+
+¡¡LA HOJA DE EVALUACIÓN PIDE UNA FUNCIÓN POR SEPARADO QUE SE LLAME REPLACE!!
+
+*/
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -8,25 +14,10 @@ static int	printError(const std::string &error)
 	return (1);
 }
 
-int	main(int argc, char **argv)
+static void	replace(std::ifstream &inFile, std::ofstream &outFile, const std::string &s1, const std::string &s2)
 {
-	if (argc != 4)
-		return printError("Invalid number of arguments. Please, usage: <filename> <s1> <s2>.");
-	std::string file = argv[1];
-	std::string s1 = argv[2];
-	std::string s2 = argv[3];
 	std::string line;
-	std::string replaceName;
-
-	if (s1.empty())
-		return printError("string to be found can't be empty.");
-	std::ifstream inFile(file.c_str());
-	if (!inFile.is_open())
-		return printError("file couldn't be opened.");
-	replaceName = file.append(".replace");
-	std::ofstream outFile(replaceName.c_str());
-	if (!outFile.is_open())
-		return printError("file couldn't be created.");
+	
 	while (std::getline(inFile, line))
 	{
 		size_t pos = 0;
@@ -38,6 +29,27 @@ int	main(int argc, char **argv)
 		}
 		outFile << line << std::endl;
 	}
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc != 4)
+		return printError("Invalid number of arguments. Please, usage: <filename> <s1> <s2>.");
+	std::string file = argv[1];
+	std::string s1 = argv[2];
+	std::string s2 = argv[3];
+	std::string replaceName;
+
+	if (s1.empty())
+		return printError("string to be found can't be empty.");
+	std::ifstream inFile(file.c_str());
+	if (!inFile.is_open())
+		return printError("file couldn't be opened.");
+	replaceName = file.append(".replace");
+	std::ofstream outFile(replaceName.c_str());
+	if (!outFile.is_open())
+		return printError("file couldn't be created.");
+	replace(inFile, outFile, s1, s2);
 	inFile.close();
 	outFile.close();
 	return (0);
